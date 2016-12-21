@@ -20,7 +20,7 @@ namespace cssharp_example
         public void start()
         {
             driver = new ChromeDriver();
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
         [Test]
@@ -28,7 +28,7 @@ namespace cssharp_example
         {
             driver.Url = "http://google.com/";
             driver.FindElement(By.Name("q")).SendKeys("webdriver");
-            driver.FindElement(By.Name("q")).Click();
+            driver.FindElement(By.Name("btnK")).Click();
             wait.Until(ExpectedConditions.TitleIs("webdriver - Пошук Google"));
         }
 
