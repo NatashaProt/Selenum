@@ -20,7 +20,7 @@ namespace cssharp_example
         public void start()
         {
             driver = new ChromeDriver();
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
         }
 
         [Test]
